@@ -1,0 +1,54 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Sidloto2025</title><link rel="stylesheet" href="styles.css"/>
+</head><body>
+<header class="topbar"><h1>Sidloto2025 <span class="badge">MSI</span></h1><div id="status" class="status">Conectando...</div></header>
+<main class="container">
+<section class="panel"><h2>Gerar Jogos (Básico)</h2>
+<div class="grid">
+<label>Estratégia <select id="strategy"></select></label>
+<label>Quantidade <input id="qty" type="number" min="1" max="100" value="5"/></label>
+<label>Pares (alvo) <input id="even" type="number" min="0" max="15" placeholder="7 ou 8"/></label>
+<label>Soma mínima <input id="min_sum" type="number" placeholder="185"/></label>
+<label>Soma máxima <input id="max_sum" type="number" placeholder="200"/></label>
+<label>Último concurso (15 nums ; separados) <input id="reference" type="text" placeholder="1;2;...;15"/></label>
+<label>Repetição min <input id="min_repeat" type="number" placeholder="8"/></label>
+<label>Repetição max <input id="max_repeat" type="number" placeholder="9"/></label>
+</div>
+<button id="btn-generate">Gerar (básico)</button>
+<button id="btn-download" disabled>Baixar CSV</button>
+<button id="btn-last">Carregar último lote</button>
+</section>
+
+<section class="panel"><h2>Gerar Jogos (Otimizado)</h2>
+<div class="grid">
+<label>Último concurso <input id="last_result" type="text" placeholder="1;5;6;7;9;10;12;15;17;18;19;21;23;24;25"/></label>
+<label>Quentes (hot) <input id="hot" type="text" placeholder="10;18;8;14;6;1;15;17;21;25"/></label>
+<label>Frios (cold) <input id="cold" type="text" placeholder="2;4;16;20"/></label>
+<label>Repetição alvo <input id="repeat_target" type="number" value="9"/></label>
+<label>Pares alvo <input id="even_target" type="number" placeholder="7 ou 8"/></label>
+<label>Soma mínima <input id="omin" type="number" value="185"/></label>
+<label>Soma máxima <input id="omax" type="number" value="200"/></label>
+<label>Obrigatórias (must) <input id="must" type="text" placeholder=""/></label>
+<label>Evitar (avoid) <input id="avoid" type="text" placeholder=""/></label>
+<label>Qtd <input id="oqty" type="number" min="1" max="100" value="10"/></label>
+<label>Seed <input id="seed" type="number" value="42"/></label>
+</div>
+<button id="btn-opt">Gerar (otimizado)</button>
+</section>
+
+<section class="panel"><h2>Resultados</h2>
+<div id="results" class="results"></div>
+<div id="meta" style="margin-top:8px;color:#aaa;font-size:.9rem"></div>
+</section>
+
+<section class="panel"><h2>Histórico</h2>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+  <button id="btn-history">Atualizar histórico</button>
+  <label> Página <input id="hpage" type="number" min="1" value="1" style="width:80px"/></label>
+  <label> Tamanho <input id="hsize" type="number" min="1" max="50" value="5" style="width:80px"/></label>
+</div>
+<div id="history"></div>
+</section>
+</main>
+<script src="script.js"></script></body></html>
