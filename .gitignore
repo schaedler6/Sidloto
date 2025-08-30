@@ -1,0 +1,27 @@
+# Python
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.mypy_cache/
+pytest_cache/
+.ipynb_checkpoints/
+
+# Node (se houver frontend no mesmo repo)
+node_modules/
+.cache/
+.vite/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
