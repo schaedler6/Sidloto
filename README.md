@@ -1,18 +1,56 @@
-# Sidloto2025
+# Sidloto
 
-Gerador de jogos **Lotofácil** com:
-- Backend **Flask** (Python)
-- Estratégias básicas + **geração otimizada**
-- Filtros: repetição (8–9), pares/ímpares (7/8–8/7), faixa de soma (185–200)
-- Persistência **SQLite** com `/api/last` e `/api/history`
-- Frontend (HTML/JS/CSS) com tema **MSI**
-- **Compartilhar por WhatsApp** (texto), **baixar CSV**
+Gerador de jogos da Lotofácil com backend em Flask, frontend web em HTML/CSS/JavaScript e filtros práticos para criação de combinações com base em critérios configuráveis.
 
-## Executar local
-```powershell
-cd "$env:USERPROFILE\Documents\Sidloto2025"
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r .\config\requirements.txt
-cd .\backend
-python app.py
+O projeto permite gerar jogos de duas formas:
+
+- Modo básico: geração com estratégia e filtros diretos
+- Modo otimizado: geração com base em repetição alvo, dezenas quentes/frias, soma, pares e restrições personalizadas
+
+## Funcionalidades
+
+- Geração de jogos da Lotofácil
+- Estratégias básicas de geração
+- Geração otimizada com parâmetros ajustáveis
+- Filtro por quantidade de pares
+- Filtro por faixa de soma
+- Filtro por repetição em relação ao último concurso
+- Definição de dezenas quentes e frias
+- Definição de dezenas obrigatórias e dezenas a evitar
+- Histórico de lotes gerados
+- Exportação em CSV
+- Interface web simples e direta
+- API local para integração e testes
+
+## Tecnologias utilizadas
+
+### Backend
+- Python
+- Flask
+- Flask-CORS
+- python-dotenv
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Persistência
+- SQLite
+
+## Estrutura do projeto
+
+```text
+Sidloto/
+├── backend/
+│   └── app.py
+├── config/
+│   ├── requirements.txt
+│   └── .env
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
+├── strategies/
+├── utils/
+└── README.md
